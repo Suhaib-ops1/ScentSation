@@ -1,0 +1,194 @@
+/* Main container */
+.builder-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.builder-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/* Step section */
+.builder-step {
+  margin-bottom: 45px;
+  padding: 25px;
+  background: #eaeaea;
+  border-left: 5px solid #6c757d;
+  border-radius: 12px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.step-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Note buttons */
+.note-section h5 {
+  margin: 15px 0 8px;
+  color: #555;
+}
+
+.note-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+  .note-list button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ccc;
+    color: #222;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+    .note-list button:hover {
+      background-color: #b0b0b0;
+    }
+
+    .note-list button.selected {
+      background-color: #6c757d;
+      color: #fff;
+    }
+
+/* Bottle cards */
+.bottle-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bottle-card {
+  flex: 1 1 200px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #dedede;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+  .bottle-card img {
+    max-width: 100%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  .bottle-card h6 {
+    margin: 8px 0 4px;
+    color: #333;
+  }
+
+  .bottle-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .bottle-card strong {
+    display: block;
+    margin-top: 8px;
+    color: #000;
+  }
+
+  .bottle-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .bottle-card.active {
+    border: 2px solid #6c757d;
+    background-color: #cfcfcf;
+  }
+
+/* Input & confirm section */
+.name-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+}
+
+.review-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddd;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+  .review-box p {
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+  }
+
+.confirm-btn {
+  background-color: #6c757d;
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+  .confirm-btn:hover {
+    background-color: #5a6268;
+  }
+
+/* Success message */
+.builder-result p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

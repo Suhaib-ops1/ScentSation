@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ScentSation.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa6f3c43b2fff56eb7989ddd4856b3d515b9a3e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08c2c7d5797a4c5c88d2fdf87045f16d7f428f23")]
 [assembly: System.Reflection.AssemblyProductAttribute("ScentSation.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ScentSation.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

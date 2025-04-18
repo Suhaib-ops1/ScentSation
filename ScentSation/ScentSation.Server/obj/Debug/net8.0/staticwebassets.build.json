@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "+n7kyl2xtJBLRLDf5KyT6axxZc3DKDaZpxnGg1DDAB0=",
+  "Source": "ScentSation.Server",
+  "BasePath": "_content/ScentSation.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\hi\\Desktop\\ScentSation\\ScentSation\\scentsation.client\\scentsation.client.esproj",
+      "Version": 2,
+      "Source": "scentsation.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

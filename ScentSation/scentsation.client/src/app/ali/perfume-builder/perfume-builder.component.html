@@ -1,0 +1,70 @@
+<div class="builder-container" [@fadeInContainer]>
+  <h2 class="builder-title">Design Your Custom Perfume</h2>
+
+  <!-- Step 1: Notes -->
+  <div class="builder-step" [@fadeSlide]>
+    <h4 class="step-title">Step 1: Choose Your Notes</h4>
+
+    <div class="note-section">
+      <h5>Top Notes</h5>
+      <div class="note-list">
+        <button *ngFor="let note of topNotes"
+                [ngClass]="{ 'selected': isNoteSelected(note.noteId) }"
+                (click)="toggleNote(note.noteId)">
+          {{ note.name }}
+        </button>
+      </div>
+
+      <h5>Middle Notes</h5>
+      <div class="note-list">
+        <button *ngFor="let note of middleNotes"
+                [ngClass]="{ 'selected': isNoteSelected(note.noteId) }"
+                (click)="toggleNote(note.noteId)">
+          {{ note.name }}
+        </button>
+      </div>
+
+      <h5>Base Notes</h5>
+      <div class="note-list">
+        <button *ngFor="let note of baseNotes"
+                [ngClass]="{ 'selected': isNoteSelected(note.noteId) }"
+                (click)="toggleNote(note.noteId)">
+          {{ note.name }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Bottles -->
+  <div class="builder-step" [@fadeSlide]>
+    <h4 class="step-title">Step 2: Choose a Bottle</h4>
+
+    <div class="bottle-grid">
+      <div class="bottle-card"
+           *ngFor="let bottle of bottles"
+           [class.active]="selectedBottle?.bottleId === bottle.bottleId"
+           (click)="selectBottle(bottle)">
+        <img [src]="bottle.imageUrl" alt="Bottle Image">
+        <h6>{{ bottle.name }}</h6>
+        <p>{{ bottle.size }} • {{ bottle.color }}</p>
+        <strong>{{ bottle.price }} JOD</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3: Name and Review -->
+  <div class="builder-step" [@fadeSlide]>
+    <h4 class="step-title">Step 3: Name Your Perfume</h4>
+
+    <input type="text" [(ngModel)]="perfumeName" placeholder="Enter a name for your perfume" class="name-input" />
+
+    <div class="review-box">
+      <p><strong>Total Price:</strong> {{ perfumePrice.toFixed(2) }} JOD</p>
+      <button (click)="confirmPerfume()" class="confirm-btn">Add to Cart</button>
+    </div>
+
+    <div class="builder-result" *ngIf="message" [@fadeSlide]>
+      <p>{{ message }}</p>
+    </div>
+  </div>
+</div>

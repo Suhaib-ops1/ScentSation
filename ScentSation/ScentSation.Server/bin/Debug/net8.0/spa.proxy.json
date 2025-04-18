@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:50536",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\hi\\Desktop\\ScentSation\\ScentSation\\ScentSation.Server\\..\\scentsation.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
