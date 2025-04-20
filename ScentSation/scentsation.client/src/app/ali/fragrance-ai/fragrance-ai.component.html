@@ -1,0 +1,43 @@
+<div class="ai-container">
+  <h2>💡 Let AI Help You Choose Your Fragrance</h2>
+
+  <!-- تحميل -->
+  <div *ngIf="isLoading" class="loading">🔄 Generating your personalized fragrance...</div>
+
+  <!-- الخطوة 1: اختيار الجنس -->
+  <div *ngIf="stage === 'gender'" class="step-box">
+    <p class="step-title">Please select your gender to begin:</p>
+    <button class="gender-btn" (click)="selectGender('male')">👨 Male</button>
+    <button class="gender-btn" (click)="selectGender('female')">👩 Female</button>
+  </div>
+
+  <!-- الخطوة 2: عرض الأسئلة -->
+  <div *ngIf="stage === 'questions'" class="step-box">
+    <form (ngSubmit)="submitAnswers()">
+      <div *ngFor="let q of questions; let i = index" class="question-card">
+        <p><strong>Q{{ i + 1 }}: {{ q.question }}</strong></p>
+        <div class="options">
+          <label *ngFor="let opt of q.options" class="option-label">
+            <input type="radio" name="q{{ i }}" [value]="opt" (change)="selectOption(i, opt)" required>
+            {{ opt }}
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">✅ Submit Answers</button>
+    </form>
+  </div>
+
+  <!-- 🌟 الخطوة 3: عرض العطر داخل Popup -->
+  <!-- ✅ Popup مخصص عند الانتهاء -->
+  <div *ngIf="stage === 'result'" class="ai-popup-success">
+    <div class="popup-card">
+      <h2>🎉 Perfume Created Successfully!</h2>
+      <p class="perfume-name">{{ resultPerfume.name }}</p>
+
+      <p class="perfume-desc">
+        {{ resultPerfume.description }}
+      </p>
+
+      <button class="go-to-cart-btn" (click)="goToCart()">🛒 View Cart</button>
+    </div>
+  </div>

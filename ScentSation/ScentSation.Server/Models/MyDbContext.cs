@@ -15,6 +15,8 @@ public partial class MyDbContext : DbContext
     {
     }
 
+    public virtual DbSet<AvailableSession> AvailableSessions { get; set; }
+
     public virtual DbSet<BottleOption> BottleOptions { get; set; }
 
     public virtual DbSet<Cart> Carts { get; set; }
@@ -43,6 +45,29 @@ public partial class MyDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<AvailableSession>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Availabl__3214EC0774510858");
+
+            entity.Property(e => e.Duration)
+                .HasMaxLength(20)
+                .IsUnicode(false);
+            entity.Property(e => e.Notes)
+                .HasMaxLength(10)
+                .IsFixedLength();
+            entity.Property(e => e.SessionName)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Time).HasColumnType("datetime");
+
+            entity.HasOne(d => d.Staff).WithMany(p => p.AvailableSessions)
+                .HasForeignKey(d => d.StaffId)
+                .HasConstraintName("FK_AvailableSessions_Users");
+        });
+
         modelBuilder.Entity<BottleOption>(entity =>
         {
             entity.HasKey(e => e.BottleId).HasName("PK__BottleOp__05EC4081EBEA3C38");

@@ -1,0 +1,54 @@
+<table class="cart-table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cartItems">
+      <td class="product-info">
+        <img [src]="item.customPerfume?.bottle?.imageUrl" alt="Product Image" />
+        <span>{{ item.customPerfume?.name }}</span>
+      </td>
+      <td>{{ item.customPerfume?.price | currency:'JOD' }}</td>
+      <td>
+        <div class="qty-control">
+          <button (click)="updateQuantity(item, -1)">−</button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="updateQuantity(item, 1)">+</button>
+        </div>
+      </td>
+      <td>
+        <button class="remove-btn" (click)="removeItem(item.cartId)">Remove</button>
+        <button class="details-btn" (click)="openPopup(item)">Details 🔍</button>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="total-section" *ngIf="cartItems.length > 0">
+  <h3>Total: {{ totalPrice.toFixed(2) }} JOD</h3>
+  <button class="checkout-btn" (click)="goToCheckout()">Proceed to Checkout</button>
+</div>
+<!-- Popup Modal -->
+<div class="popup-overlay" *ngIf="selectedItem" (click)="closePopup()">
+  <div class="popup-box" (click)="$event.stopPropagation()">
+    <img [src]="selectedItem.customPerfume?.bottle?.imageUrl" alt="Perfume Image" />
+    <h3>{{ selectedItem.customPerfume?.name }}</h3>
+    <p><strong>Bottle:</strong> {{ selectedItem.customPerfume?.bottle?.name }}</p>
+    <p><strong>Price:</strong> {{ selectedItem.customPerfume?.price }} JOD</p>
+    <p><strong>Notes:</strong></p>
+    <p><strong>Notes:</strong></p>
+    <ul>
+      <li *ngFor="let note of selectedItem.customPerfume?.notes">
+        {{ note.name }} ({{ note.type }})
+      </li>
+    </ul>
+
+    <button (click)="closePopup()">Close</button>
+  </div>
+</div>

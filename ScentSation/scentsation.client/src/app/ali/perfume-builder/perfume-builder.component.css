@@ -192,3 +192,13 @@
     transform: translateY(0);
   }
 }
+.view-history-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+  .view-history-link:hover {
+    color: #0056b3;
+  }

@@ -1,0 +1,33 @@
+<!--<a routerLink="/BoockedSession" class="btn btn-primary">Booked Sessions</a>-->
+<table class="table table-hover">
+  <thead>
+    <tr>
+
+      <th scope="col">#</th>
+      <th scope="col">Session Name</th>
+      <th scope="col">Time</th>
+      <th scope="col">Staff Name</th>
+      <th scope="col">status</th>
+      <th scope="col">Notes</th>
+      <th scope="col">Duration</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let session of sessions">
+
+      <td>{{session.id}}</td>
+      <td>{{session.sessionName}}</td>
+      <td>{{session.time}}</td>
+      <td>{{session.staffId}}</td>
+      <td>{{session.status}}</td>
+      <td>{{session.notes}}</td>
+      <td>{{session.duration}}</td>
+      <td><button (click)="reserveBtn(session.id, session)"> ٌReserve </button></td>
+
+
+    </tr>
+
+  </tbody>
+</table>

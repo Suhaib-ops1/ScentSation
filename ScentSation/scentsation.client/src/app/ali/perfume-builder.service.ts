@@ -29,7 +29,8 @@ export class PerfumeBuilderService {
   }
 
   // ✅ جلب كل العطور المصممة لمستخدم معيّن
-  getPerfumesByUser(userId: number): Observable<any[]> {
+  getPerfumesByUser(userId: number) {
     return this.http.get<any[]>(`${this.perfumeUrl}/user/${userId}`);
   }
+
 }

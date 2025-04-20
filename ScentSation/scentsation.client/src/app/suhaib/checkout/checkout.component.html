@@ -1,0 +1,44 @@
+<div class="checkout-container" [ngClass]="selectedPaymentMethod">
+  <h2>🧾 Checkout</h2>
+
+  <form (ngSubmit)="submitOrder()" #checkoutForm="ngForm">
+    <div class="form-section">
+      <label>Full Name:</label>
+      <input type="text" required [(ngModel)]="shippingDetails.fullName" name="fullName" />
+
+      <label>Phone:</label>
+      <input type="tel" required [(ngModel)]="shippingDetails.phone" name="phone" />
+
+      <label>Address:</label>
+      <textarea required [(ngModel)]="shippingDetails.address" name="address"></textarea>
+    </div>
+
+    <div class="form-section">
+      <h3>💳 Payment Method</h3>
+      <label><input type="radio" name="payment" value="credit" [(ngModel)]="selectedPaymentMethod" /> Credit Card</label>
+      <label><input type="radio" name="payment" value="orange" [(ngModel)]="selectedPaymentMethod" /> Orange Money</label>
+      <label><input type="radio" name="payment" value="cod" [(ngModel)]="selectedPaymentMethod" /> Cash on Delivery</label>
+
+      <div *ngIf="selectedPaymentMethod === 'credit'" class="credit-card-fields">
+        <input type="text" placeholder="Card Number" required />
+        <input type="text" placeholder="MM/YY" required />
+        <input type="text" placeholder="CVV" required />
+      </div>
+
+      <div *ngIf="selectedPaymentMethod === 'orange'" class="orange-money-fields">
+        <p><strong>Pay to this number:</strong> 📱 <code>0777785218</code></p>
+        <input type="file" (change)="onFileSelected($event)" />
+      </div>
+    </div>
+
+    <div class="order-summary">
+      <h3>🧴 Order Summary</h3>
+      <div *ngFor="let item of cartItems">
+        <p>{{ item.customPerfume.name }} - {{ item.quantity }} × {{ item.customPerfume.price }} JOD</p>
+      </div>
+      <h4>Total: {{ totalPrice.toFixed(2) }} JOD</h4>
+    </div>
+
+    <button type="submit" class="confirm-btn">✔ Confirm Order</button>
+  </form>
+</div>

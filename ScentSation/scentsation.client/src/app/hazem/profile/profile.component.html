@@ -1,0 +1,66 @@
+<div class="container mt-5">
+  <div *ngIf="user" class="card p-4 shadow-lg">
+    <div class="text-center mb-3">
+      <img [src]="user.profileImageUrl || 'https://via.placeholder.com/150'" alt="Profile Image" class="img-thumbnail" width="150" height="150">
+    </div>
+    <h2 class="text-center">Welcome, {{ user.fullName }}!</h2>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Phone Number:</strong> {{ user.phoneNumber }}</p>
+  </div>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+      Edit Profile
+    </button>
+  </div>
+</div>
+
+<!-- ✨ Edit Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form #editForm="ngForm" (ngSubmit)="updateProfile()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" [(ngModel)]="editableUser.fullName" name="fullName" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" [(ngModel)]="editableUser.email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="number" class="form-control" [(ngModel)]="editableUser.phoneNumber" name="phoneNumber" required>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label">Profile Image</label>
+              <input type="file" (change)="onImageSelected($event)" class="form-control mb-2" accept="image/*">
+
+              <button type="button" (click)="uploadImage(selectedFile)" class="btn btn-outline-primary w-100 mb-2" [disabled]="loading || !selectedFile">
+                {{ loading ? 'Uploading...' : 'Upload Image' }}
+              </button>
+
+              <div *ngIf="uploadedImageUrl" class="text-center">
+                <img [src]="uploadedImageUrl" alt="Uploaded" class="img-thumbnail mt-2" width="200">
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer mt-4">
+            <button type="submit" class="btn btn-success w-100">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

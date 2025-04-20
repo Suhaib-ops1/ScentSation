@@ -21,6 +21,8 @@ public partial class User
 
     public DateTime? CreatedAt { get; set; }
 
+    public virtual ICollection<AvailableSession> AvailableSessions { get; set; } = new List<AvailableSession>();
+
     public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
 
     public virtual ICollection<ConsultationAppointment> ConsultationAppointmentStaffs { get; set; } = new List<ConsultationAppointment>();

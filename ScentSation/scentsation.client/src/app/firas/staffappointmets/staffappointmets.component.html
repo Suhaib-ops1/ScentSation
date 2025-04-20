@@ -1,0 +1,31 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+
+      <th scope="col">#</th>
+      <th scope="col">staffId</th>
+      <th scope="col">appointment Date</th>
+      <th scope="col">time Slot</th>
+      <th scope="col">status</th>
+      <th scope="col">Notes</th>
+      <th scope="col">createdAt</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let session of StaffAppointments">
+
+      <td>{{session.id}}</td>
+      <td>{{session.staffId}}</td>
+      <td>{{session.appointmentDate}}</td>
+      <td>{{session.timeSlot}}</td>
+      <td>{{session.status}}</td>
+      <td>{{session.notes}}</td>
+      <td>{{session.createdAt}}</td>
+
+
+    </tr>
+
+  </tbody>
+</table>

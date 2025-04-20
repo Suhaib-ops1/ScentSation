@@ -1,0 +1,11 @@
+<div *ngIf="previousPerfumes.length > 0; else noData">
+  <div *ngFor="let perfume of previousPerfumes">
+    <h3>{{ perfume.name }}</h3>
+    <p>Price: {{ perfume.price }} JOD</p>
+    <button (click)="addToCart(perfume.customPerfumeId)">Add to Cart</button>
+  </div>
+</div>
+
+<ng-template #noData>
+  <p>No perfumes found.</p>
+</ng-template>

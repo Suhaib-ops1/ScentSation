@@ -107,8 +107,9 @@ export class PerfumeBuilderComponent implements OnInit {
       name: this.perfumeName,
       bottleId: this.selectedBottle.bottleId,
       price: this.perfumePrice,
-      customPerfumeNotes: this.selectedNoteIds.map(noteId => ({ noteId }))
+      customPerfumeNoteIds: this.selectedNoteIds
     };
+
 
     this.perfumeService.createCustomPerfume(perfumeData).subscribe((createdPerfume: any) => {
       const cartItem = {
@@ -134,4 +135,8 @@ export class PerfumeBuilderComponent implements OnInit {
   isNoteSelected(id: number) {
     return this.selectedNoteIds.includes(id);
   }
+
+
 }
+
+

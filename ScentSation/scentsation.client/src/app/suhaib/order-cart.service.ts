@@ -8,6 +8,7 @@ export class OrderCartService {
   private cartUrl = 'https://localhost:7199/api/cart';
   private orderUrl = 'https://localhost:7199/api/order';
   private paymentUrl = 'https://localhost:7199/api/payment';
+  private baseUrl = 'https://localhost:7199/api';
 
   constructor(private http: HttpClient) { }
 
@@ -37,8 +38,9 @@ export class OrderCartService {
 
   // Clear all cart items for a user
   clearCartByUser(userId: number) {
-    return this.http.delete(`${this.cartUrl}/clear/${userId}`);
+    return this.http.delete(`${this.baseUrl}/cart/clear/${userId}`);
   }
+
 
   // =====================
   // 📦 ORDER OPERATIONS
@@ -46,8 +48,9 @@ export class OrderCartService {
 
   // Get orders by user
   getOrdersByUser(userId: number) {
-    return this.http.get(`${this.orderUrl}/user/${userId}`);
+    return this.http.get(`${this.baseUrl}/order/user/${userId}`);
   }
+
 
   // Get all orders (admin)
   getAllOrders() {
@@ -56,7 +59,7 @@ export class OrderCartService {
 
   // Place a new order
   placeOrder(orderData: any) {
-    return this.http.post(this.orderUrl, orderData);
+    return this.http.post(`${this.baseUrl}/order`, orderData);
   }
 
   // Update order status
