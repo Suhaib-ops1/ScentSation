@@ -1,0 +1,103 @@
+/* Wrapper */
+.admin-feedback-wrapper {
+  width: 100%;
+  background-color: #f9fafc;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* Main Card */
+.feedback-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #d5dce3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  margin-top: 20px;
+}
+
+/* Heading */
+.feedback-heading {
+  color: #2b3a55;
+}
+
+/* Message count badge */
+.feedback-count-badge {
+  background-color: #2b3a55;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Feedback Table */
+.feedback-table {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
+}
+
+.feedback-table-header {
+  background-color: #2b3a55;
+  color: #ffffff;
+}
+
+  .feedback-table-header th {
+    font-size: 15px;
+    padding: 14px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+.feedback-table td {
+  font-size: 15px;
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.feedback-table tbody tr:nth-child(odd) {
+  background-color: #f9fafc;
+}
+
+.feedback-table tbody tr:hover {
+  background-color: #e6ecf1;
+  transition: 0.2s ease-in-out;
+}
+
+/* Badge (for Email) */
+.feedback-badge {
+  display: inline-block;
+  background-color: #2b3a55;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Alerts */
+.alert {
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 12px 20px;
+}
+
+  .alert.alert-secondary {
+    background-color: #edf1f5;
+    color: #2b3a55;
+  }
+
+  .alert.alert-danger {
+    background-color: #fdecea;
+    color: #c0392b;
+  }
+
+  .alert.alert-warning {
+    background-color: #fff7e6;
+    color: #a77000;
+  }

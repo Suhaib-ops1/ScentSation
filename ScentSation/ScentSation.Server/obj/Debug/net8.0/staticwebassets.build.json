@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "+n7kyl2xtJBLRLDf5KyT6axxZc3DKDaZpxnGg1DDAB0=",
+  "Hash": "tuHStZVAgHOLjB0ifD5n5pY2TGY/gDCJeW8wu0FdKzw=",
   "Source": "ScentSation.Server",
   "BasePath": "_content/ScentSation.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\hi\\Desktop\\ScentSation\\ScentSation\\scentsation.client\\scentsation.client.esproj",
+      "Identity": "C:\\Users\\Orange\\Desktop\\ScentSation\\ScentSation\\scentsation.client\\scentsation.client.esproj",
       "Version": 2,
       "Source": "scentsation.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",

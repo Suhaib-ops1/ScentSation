@@ -1,0 +1,49 @@
+<div class="admin-feedback-wrapper px-5 py-4">
+  <div class="feedback-card shadow bg-white p-4 rounded">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold feedback-heading">📬 Contact Messages</h2>
+      <span class="badge feedback-count-badge fs-6">{{ messages.length }} messages</span>
+    </div>
+
+    <!-- Loading -->
+    <div *ngIf="isLoading" class="alert alert-secondary fs-5 text-center">
+      Loading messages...
+    </div>
+
+    <!-- Error -->
+    <div *ngIf="hasError && !isLoading" class="alert alert-danger fs-5 text-center">
+      ❌ Error loading messages. Please try again later.
+    </div>
+
+    <!-- No Messages -->
+    <div *ngIf="!isLoading && !hasError && messages.length === 0" class="alert alert-warning fs-5 text-center">
+      No messages found.
+    </div>
+
+    <!-- Table -->
+    <!-- Table -->
+    <div class="table-responsive" *ngIf="!isLoading && !hasError && messages.length > 0">
+      <table class="feedback-table table align-middle">
+        <thead class="feedback-table-header">
+          <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Sent At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let msg of messages">
+            <td class="fw-semibold">{{ msg.fullName }}</td>
+            <td><span class="feedback-badge">{{ msg.email }}</span></td>
+            <td>{{ msg.subject || '—' }}</td>
+            <td class="text-start">{{ msg.message }}</td>
+            <td>{{ msg.sentAt | date: 'medium' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

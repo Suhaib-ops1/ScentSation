@@ -1,0 +1,66 @@
+.user-management-wrapper {
+  width: 100%;
+  background-color: #f9fafc;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.user-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #d5dce3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  margin-top: 20px;
+}
+
+.user-heading {
+  color: #2b3a55;
+}
+
+.user-count-badge {
+  background-color: #2b3a55;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Table styling */
+.user-table {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
+}
+
+.user-table-header {
+  background-color: #2b3a55;
+  color: #ffffff;
+}
+
+  .user-table-header th {
+    font-size: 15px;
+    padding: 14px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+.user-table td {
+  font-size: 15px;
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-table tbody tr:nth-child(odd) {
+  background-color: #f9fafc;
+}
+
+.user-table tbody tr:hover {
+  background-color: #e6ecf1;
+  transition: 0.2s ease-in-out;
+}

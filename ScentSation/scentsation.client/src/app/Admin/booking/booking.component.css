@@ -1,0 +1,68 @@
+/* Wrapper and Card */
+.consultation-wrapper {
+  width: 100%;
+  background-color: #f9fafc;
+  min-height: 100vh;
+}
+
+.consultation-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #d5dce3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  margin-top: 20px;
+}
+
+/* Heading */
+.consultation-heading {
+  color: #2b3a55;
+}
+
+/* Table */
+.consultation-table {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
+}
+
+.consultation-table-header {
+  background-color: #2b3a55;
+  color: #ffffff;
+}
+
+  .consultation-table-header th {
+    font-size: 15px;
+    padding: 14px;
+    text-align: center;
+  }
+
+.consultation-table td {
+  font-size: 15px;
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.consultation-table tbody tr:nth-child(odd) {
+  background-color: #f9fafc;
+}
+
+.consultation-table tbody tr:hover {
+  background-color: #e6ecf1;
+  transition: 0.2s ease-in-out;
+}
+
+/* Buttons */
+.btn-success {
+  background-color: #2b3a55;
+  border-color: #2b3a55;
+}
+
+  .btn-success:hover {
+    background-color: #1d273b;
+    border-color: #1d273b;
+  }

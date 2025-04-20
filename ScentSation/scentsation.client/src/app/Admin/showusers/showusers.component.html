@@ -1,0 +1,32 @@
+<div class="user-management-wrapper px-4 py-4">
+  <div class="user-card shadow bg-white p-4 rounded">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="fw-bold user-heading">👥 All Users</h3>
+      <span class="badge user-count-badge">{{ prod.length }} users</span>
+    </div>
+
+    <div class="table-responsive">
+      <table class="user-table table align-middle">
+        <thead class="user-table-header">
+          <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of prod">
+            <td>{{ item.userId }}</td>
+            <td>{{ item.fullName }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.phoneNumber }}</td>
+          </tr>
+          <tr *ngIf="prod.length === 0">
+            <td colspan="4" class="text-muted text-center">No users found.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

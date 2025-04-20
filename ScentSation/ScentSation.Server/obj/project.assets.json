@@ -60,6 +60,9 @@
           }
         }
       },
+      "Chart.js/3.7.1": {
+        "type": "package"
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1787,6 +1790,19 @@
         "lib/netstandard2.1/BCrypt.Net-Next.dll",
         "lib/netstandard2.1/BCrypt.Net-Next.xml",
         "readme.md"
+      ]
+    },
+    "Chart.js/3.7.1": {
+      "sha512": "gJunTMEueTNdA5Hp92J9sv363msSemW+GSy1VtbrwjxCaMrp+/mgB20EdVezbP34dbM+h+A8G5XbEuL6tOJoCw==",
+      "type": "package",
+      "path": "chart.js/3.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "chart.js.3.7.1.nupkg.sha512",
+        "chart.js.nuspec",
+        "content/Scripts/chart.js",
+        "content/Scripts/chart.min.js"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -5226,6 +5242,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "BCrypt.Net-Next >= 4.0.3",
+      "Chart.js >= 3.7.1",
       "Microsoft.AspNetCore.SpaProxy >= 8.*-*",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.4",
@@ -5234,23 +5251,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hi\\.nuget\\packages\\": {},
+    "C:\\Users\\Orange\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hi\\Desktop\\ScentSation\\ScentSation\\ScentSation.Server\\ScentSation.Server.csproj",
+      "projectUniqueName": "C:\\Users\\Orange\\Desktop\\ScentSation\\ScentSation\\ScentSation.Server\\ScentSation.Server.csproj",
       "projectName": "ScentSation.Server",
-      "projectPath": "C:\\Users\\hi\\Desktop\\ScentSation\\ScentSation\\ScentSation.Server\\ScentSation.Server.csproj",
-      "packagesPath": "C:\\Users\\hi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hi\\Desktop\\ScentSation\\ScentSation\\ScentSation.Server\\obj\\",
+      "projectPath": "C:\\Users\\Orange\\Desktop\\ScentSation\\ScentSation\\ScentSation.Server\\ScentSation.Server.csproj",
+      "packagesPath": "C:\\Users\\Orange\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Orange\\Desktop\\ScentSation\\ScentSation\\ScentSation.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\hi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Orange\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5278,7 +5295,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -5287,6 +5304,10 @@
           "BCrypt.Net-Next": {
             "target": "Package",
             "version": "[4.0.3, )"
+          },
+          "Chart.js": {
+            "target": "Package",
+            "version": "[3.7.1, )"
           },
           "Microsoft.AspNetCore.SpaProxy": {
             "target": "Package",
@@ -5332,7 +5353,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

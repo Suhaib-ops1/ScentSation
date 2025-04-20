@@ -1,1 +1,2 @@
 C:\Users\hi\Desktop\ScentSation\ScentSation\scentsation.client\obj\Debug\scentsation.client.esproj.CoreCompileInputs.cache
+C:\Users\Orange\Desktop\ScentSation\ScentSation\scentsation.client\obj\Debug\scentsation.client.esproj.CoreCompileInputs.cache

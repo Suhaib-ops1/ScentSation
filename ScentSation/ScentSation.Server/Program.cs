@@ -1,5 +1,7 @@
 ﻿using CoreApiAngular.Server.DataService;
 using Microsoft.EntityFrameworkCore;
+using ScentSation.Server.Admin.DataService;
+using ScentSation.Server.Admin.IDataService;
 using ScentSation.Server.firasServices.IDataService;
 using ScentSation.Server.Models;
 
@@ -16,7 +18,10 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
     });
 
-builder.Services.AddScoped<IMyDataService, MyDataService>();
+builder.Services.AddScoped<IMyDataService, MyDataService>()
+                .AddScoped<IDataServicee, DataServicee>();
+
+
 
 builder.Services.AddCors(options =>
 {

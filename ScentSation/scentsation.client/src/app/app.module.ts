@@ -19,6 +19,14 @@ import { AvailableSessionsComponent } from './firas/availablesessions/availables
 import { RegisterComponent } from './hazem/register/register.component';
 import { LoginComponent } from './hazem/login/login.component';
 import { ProfileComponent } from './hazem/profile/profile.component';
+import { SidebarComponent } from './Admin/sidebar/sidebar.component';
+import { DashboardContentComponent } from './Admin/dashboard-content/dashboard-content.component';
+import { DashboardComponent } from './Admin/dashboard/dashboard.component';
+import { AdminFeedbackComponent } from './Admin/admin-feedback/admin-feedback.component';
+import { ShowusersComponent } from './Admin/showusers/showusers.component';
+import { StaffComponent } from './Admin/staff/staff.component';
+import { BookingComponent } from './Admin/booking/booking.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +43,14 @@ import { ProfileComponent } from './hazem/profile/profile.component';
     StaffAppointmetsComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    SidebarComponent,
+    DashboardContentComponent,
+    DashboardComponent,
+    AdminFeedbackComponent,
+    ShowusersComponent,
+    StaffComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

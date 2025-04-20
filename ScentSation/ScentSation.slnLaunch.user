@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "scentsation.client\\scentsation.client.esproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ScentSation.Server\\ScentSation.Server.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
